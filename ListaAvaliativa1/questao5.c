@@ -1,27 +1,32 @@
 #include <stdio.h>
 
-int main(){
-    int A, B, menorV, maiorV;
+int main() {
+    int A, B;
+
     scanf("%d %d", &A, &B);
 
-    if (A < B){
-        menorV = A;
-        maiorV = B;
-    } else if (A > B){
-        menorV = B;
-        maiorV = A;
-    } else{
-        printf("Os valores lidos sao iguais");
-        return 0;
-    }
-    
-    printf("%d eh maior que %d \n", maiorV, menorV);
+    if (A == B) {
+        printf("Os valores lidos sao iguais\n");
+    } else {
+        int maior, menor;
+        if (A > B) {
+            maior = A;
+            menor = B;
+        } else {
+            maior = B;
+            menor = A;
+        }
 
-    if (maiorV % menorV == 0){
-        printf("%d eh multiplo de %d \n", maiorV, menorV);
-    } else{
-        printf("%d nao eh multiplo de %d \n", maiorV, menorV);
-    }    
+        printf("%d eh maior que %d\n", maior, menor);
+
+        if (menor == 0) {
+            printf("%d nao eh multiplo de %d\n", maior, menor);
+        } else if (maior % menor == 0) {
+            printf("%d eh multiplo de %d\n", maior, menor);
+        } else {
+            printf("%d nao eh multiplo de %d\n", maior, menor);
+        }
+    }
 
     return 0;
 }
