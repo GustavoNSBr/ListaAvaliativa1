@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int A, B;
+    int a, b;
 
-    scanf("%d %d", &A, &B);
+    scanf("%d %d", &a, &b);
 
-    if (A == B) {
+    if (a == b) {
         printf("Os valores lidos sao iguais\n");
     } else {
         int maior, menor;
-        if (A > B) {
-            maior = A;
-            menor = B;
+        if (a > b) {
+            maior = a;
+            menor = b;
         } else {
-            maior = B;
-            menor = A;
+            maior = b;
+            menor = a;
         }
 
         printf("%d eh maior que %d\n", maior, menor);
